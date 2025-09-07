@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operating System Questions & Answers</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1, h2, h3 {
+            color: #fff;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            border: 1px solid #444;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        th {
+            background-color: #222;
+            font-weight: bold;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 2rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        .image-placeholder {
+            display: block;
+            margin: 2rem auto;
+            max-width: 100%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>Operating System QB Questions & Assignment</h1>
+
+<h2>Assignment 1</h2>
+
+<h3>1. Define system call & enlist its type</h3>
+<p>A <strong>system call</strong> is the programmatic way in which a computer program requests a service from the kernel of the operating system. It provides an interface between a process and the operating system, allowing user-level processes to access resources and services of the OS.</p>
+<p>The types of system calls are:</p>
+<ul>
+    <li><strong>Process Control:</strong> Includes creating and terminating a process, loading, and executing.</li>
+    <li><strong>File Management:</strong> Includes creating, deleting, opening, closing, reading, and writing files.</li>
+    <li><strong>Device Management:</strong> Includes requesting, releasing, reading, and writing to devices.</li>
+    <li><strong>Information Maintenance:</strong> Includes getting and setting the time, date, or process attributes.</li>
+    <li><strong>Communications:</strong> Includes creating and deleting communication connections, sending and receiving messages.</li>
+</ul>
+
+<h3>2. Predict any two command-line-based OS & GUI-based OS</h3>
+<p><strong>Command-Line-Based Operating Systems:</strong></p>
+<ul>
+    <li>MS-DOS</li>
+    <li>Ubuntu Server (Linux distribution)</li>
+</ul>
+<p><strong>GUI-Based Operating Systems:</strong></p>
+<ul>
+    <li>Microsoft Windows</li>
+    <li>Apple macOS</li>
+</ul>
+
+<h3>3. Illustrate the difference between multitasking & multiprogramming</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Feature</th>
+            <th>Multitasking</th>
+            <th>Multiprogramming</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Concept</strong></td>
+            <td>A logical extension of multiprogramming. The CPU switches between processes so frequently that users can interact with each program while it is running.</td>
+            <td>Keeping multiple programs in memory at the same time to maximize CPU utilization.</td>
+        </tr>
+        <tr>
+            <td><strong>Primary Goal</strong></td>
+            <td>To provide responsiveness and a good user experience by giving the illusion of simultaneous execution.</td>
+            <td>To prevent the CPU from being idle by switching to another process whenever the current one is waiting for I/O.</td>
+        </tr>
+        <tr>
+            <td><strong>CPU Switching</strong></td>
+            <td>Based on time slices (time-sharing). Each process is given a small amount of time to run.</td>
+            <td>Based on events (e.g., I/O wait). The CPU switches only when a process voluntarily gives up the CPU.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>4. Describe the difference between time-sharing OS & multiprogramming OS</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Feature</th>
+            <th>Time-Sharing OS</th>
+            <th>Multiprogramming OS</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Objective</strong></td>
+            <td>To provide quick response time to users by switching between processes frequently.</td>
+            <td>To maximize CPU utilization by keeping it busy as much as possible.</td>
+        </tr>
+        <tr>
+            <td><strong>Execution</strong></td>
+            <td>Each process is given a small time quantum, and the CPU switches to the next process when the time is up or the process is blocked.</td>
+            <td>The CPU switches to another process only when the currently executing process is blocked for an I/O operation.</td>
+        </tr>
+        <tr>
+            <td><strong>User Interaction</strong></td>
+            <td>Highly interactive. Users can perform multiple tasks simultaneously.</td>
+            <td>Less interactive. The system focuses on job execution rather than user interaction.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>5. Describe multiprocess system with advantages & disadvantages</h3>
+<p>A <strong>multiprocess system</strong>, also known as a parallel system, is a computer system with two or more central processing units (CPUs) that share a common bus, memory, and peripheral devices. Each CPU can run processes independently, allowing for true parallel execution.</p>
+<p><strong>Advantages:</strong></p>
+<ul>
+    <li><strong>Increased Throughput:</strong> By executing multiple processes simultaneously, the system can complete more work in less time.</li>
+    <li><strong>Economy of Scale:</strong> Sharing peripherals, storage, and power supplies makes the system more cost-effective than using multiple single-processor systems.</li>
+    <li><strong>Increased Reliability:</strong> If one CPU fails, the system can continue to operate with the remaining CPUs, albeit at a reduced speed. This is known as graceful degradation.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+    <li><strong>Complex Operating System:</strong> Designing an OS for a multiprocess system is more complex due to the need for careful synchronization and load balancing.</li>
+    <li><strong>Software Challenges:</strong> Writing programs that can effectively utilize multiple CPUs requires specialized programming techniques and tools.</li>
+</ul>
+
+<h3>6. Describe & list any four services of OS</h3>
+<p>Operating system services provide an environment for the execution of programs and the development of new software. These services are provided to the users to make the programming task easier.</p>
+<p>Four key services are:</p>
+<ul>
+    <li><strong>Program Execution:</strong> The OS is responsible for loading a program into memory, executing it, and handling its normal and abnormal termination.</li>
+    <li><strong>I/O Operations:</strong> The OS manages all I/O devices and provides a clean interface for programs to perform I/O, hiding the complexity of the hardware.</li>
+    <li><strong>File-System Manipulation:</strong> The OS provides a structured way to store and retrieve information. It manages files and directories, allowing users to create, delete, read, and write data.</li>
+    <li><strong>Error Detection:</strong> The OS constantly monitors the system for potential errors, which can occur in the CPU, memory, or I/O devices. It takes appropriate action to ensure correct and consistent computing.</li>
+</ul>
+
+<h3>7. Examine the activities performing in process management & file management</h3>
+<p><strong>Process Management Activities:</strong></p>
+<ul>
+    <li><strong>Creating and Deleting:</strong> The OS handles the creation of new processes and the termination of existing ones.</li>
+    <li><strong>Scheduling:</strong> It schedules processes and threads on the CPU to ensure fairness and efficiency.</li>
+    <li><strong>Synchronization:</strong> The OS provides mechanisms for processes to synchronize their activities, preventing race conditions and other concurrency issues.</li>
+    <li><strong>Communication:</strong> It provides mechanisms for processes to communicate with each other, such as shared memory or message passing.</li>
+    <li><strong>Deadlock Handling:</strong> The OS can detect, prevent, and recover from deadlocks, which occur when processes are blocked indefinitely.</li>
+</ul>
+<p><strong>File Management Activities:</strong></p>
+<ul>
+    <li><strong>Creating and Deleting:</strong> The OS provides the ability to create and delete files and directories.</li>
+    <li><strong>Primitives:</strong> It offers primitives (system calls) for file manipulation, such as opening, closing, reading, writing, and repositioning a file.</li>
+    <li><strong>Secondary Storage Mapping:</strong> It maps files onto secondary storage (e.g., hard drives) and manages free space.</li>
+    <li><strong>Backup:</strong> The OS is responsible for backing up files to stable, non-volatile storage media to protect them from loss.</li>
+</ul>
+
+<hr>
+
+<h2>Assignment 2</h2>
+
+<h3>2 Marks Questions</h3>
+
+<h3>1. Label & Draw process state diagram along with the correct direction & arrow</h3>
+<p>A process can be in one of five states:</p>
+<ul>
+    <li><strong>New:</strong> The process is being created.</li>
+    <li><strong>Ready:</strong> The process is waiting to be assigned to a processor.</li>
+    <li><strong>Running:</strong> Instructions are being executed.</li>
+    <li><strong>Waiting:</strong> The process is waiting for some event to occur (e.g., I/O completion).</li>
+    <li><strong>Terminated:</strong> The process has finished execution.</li>
+</ul>
+<p>The process state diagram is a visual representation of the transitions between these states.</p>
+
+<ul>
+    <li><strong>New -> Ready:</strong> The OS admits the new process.</li>
+    <li><strong>Ready -> Running:</strong> The OS scheduler dispatches the process.</li>
+    <li><strong>Running -> Waiting:</strong> The process waits for an event (e.g., I/O request).</li>
+    <li><strong>Waiting -> Ready:</strong> The event the process was waiting for has completed.</li>
+    <li><strong>Running -> Ready:</strong> The process is preempted by the scheduler (e.g., time slice expires).</li>
+    <li><strong>Running -> Terminated:</strong> The process finishes its execution.</li>
+</ul>
+
+<h3>2. Define the PCB with suitable diagram</h3>
+<p>The <strong>Process Control Block (PCB)</strong> is a data structure in the operating system kernel that stores information about a process. It contains all the information needed to manage a process, including its state, identity, and resource usage. Each process has its own unique PCB.</p>
+<p>The key components of a PCB are:</p>
+<ul>
+    <li><strong>Process State:</strong> The current state of the process (e.g., Ready, Running, Waiting).</li>
+    <li><strong>Program Counter:</strong> The address of the next instruction to be executed for this process.</li>
+    <li><strong>CPU Registers:</strong> The values of all CPU registers when the process was last running.</li>
+    <li><strong>CPU Scheduling Information:</strong> The process priority, pointers to scheduling queues, and other parameters.</li>
+    <li><strong>Memory Management Information:</strong> The base and limit registers or page tables for the process.</li>
+    <li><strong>Accounting Information:</strong> CPU usage, time limits, etc.</li>
+    <li><strong>I/O Status Information:</strong> A list of open files and I/O devices allocated to the process.</li>
+</ul>
+
+
+<h3>3. Determine the concept of scheduling queues with diagram</h3>
+<p>Operating systems use <strong>scheduling queues</strong> to manage processes in different states. Processes in the system are categorized and organized into queues based on their state.</p>
+
+<ul>
+    <li><strong>Job Queue:</strong> This queue holds all the processes in the system. When a new process is created, it is added to the job queue.</li>
+    <li><strong>Ready Queue:</strong> This queue contains all processes residing in main memory that are ready and waiting to execute.</li>
+    <li><strong>Device Queues:</strong> Each device (e.g., a disk drive, printer) has its own queue. Processes that are waiting for a particular I/O device are placed in the corresponding device queue.</li>
+</ul>
+
+<h3>4 Marks Questions</h3>
+
+<h3>1. Differentiate between user-level & kernel-level thread</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Feature</th>
+            <th>User-Level Thread</th>
+            <th>Kernel-Level Thread</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Management</strong></td>
+            <td>Managed by a user-level library; the OS is unaware of them.</td>
+            <td>Managed directly by the operating system kernel.</td>
+        </tr>
+        <tr>
+            <td><strong>Creation/Context Switching</strong></td>
+            <td>Very fast and low overhead since no kernel involvement is required.</td>
+            <td>Slower due to the involvement of the kernel and system calls.</td>
+        </tr>
+        <tr>
+            <td><strong>Blocking</strong></td>
+            <td>If one user-level thread performs a blocking system call, the entire process and all its threads will block.</td>
+            <td>If a kernel-level thread blocks, the kernel can schedule another thread from the same process to run.</td>
+        </tr>
+        <tr>
+            <td><strong>Multiprocessing</strong></td>
+            <td>Cannot take advantage of multiple CPUs. The kernel only sees one process.</td>
+            <td>Can run on different CPUs simultaneously, allowing for true parallelism.</td>
+        </tr>
+        <tr>
+            <td><strong>Example</strong></td>
+            <td>POSIX Pthreads, Java Threads</td>
+            <td>Windows Threads, Linux Threads</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>2. Describe use of following commands with syntax:</h3>
+<ol>
+    <li>
+        <strong>ps</strong>
+        <ul>
+            <li><strong>Description:</strong> The <code>ps</code> (process status) command is used to display information about the currently running processes in a Linux/Unix system.</li>
+            <li><strong>Syntax:</strong> <code>ps [options]</code></li>
+            <li><strong>Example:</strong> <code>ps aux</code> shows all processes running on the system.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>wait</strong>
+        <ul>
+            <li><strong>Description:</strong> The <code>wait</code> command causes the parent process to pause its execution until one of its child processes terminates.</li>
+            <li><strong>Syntax:</strong> <code>wait [pid]</code></li>
+            <li><strong>Example:</strong> <code>wait 1234</code> will wait for the process with ID 1234 to terminate.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>kill</strong>
+        <ul>
+            <li><strong>Description:</strong> The <code>kill</code> command is used to send a signal to a process, typically to terminate it. The default signal is <code>SIGTERM</code>, which asks the process to terminate gracefully.</li>
+            <li><strong>Syntax:</strong> <code>kill [signal] [pid]</code></li>
+            <li><strong>Example:</strong> <code>kill 9 5678</code> sends the <code>SIGKILL</code> (force kill) signal to the process with ID 5678.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>sleep</strong>
+        <ul>
+            <li><strong>Description:</strong> The <code>sleep</code> command is used to pause the execution of a script or process for a specified amount of time.</li>
+            <li><strong>Syntax:</strong> <code>sleep [duration]</code></li>
+            <li><strong>Example:</strong> <code>sleep 5</code> will pause execution for 5 seconds.</li>
+        </ul>
+    </li>
+</ol>
+
+<h3>3. Illustrate and define term interprocess communication & explain one technique of IPC</h3>
+<p><strong>Interprocess Communication (IPC)</strong> is a mechanism provided by the operating system that allows processes to communicate and synchronize their actions without sharing the same address space. IPC is essential for concurrent processes to cooperate.</p>
+<p><strong>Shared Memory Technique:</strong><br>
+Shared memory is a region of memory that is shared by multiple processes. One process creates a shared memory segment, and other processes that want to communicate attach to it. This technique is extremely fast because once the memory segment is set up, communication happens at memory-access speed, without any kernel intervention.</p>
+<p><strong>Illustration of Shared Memory:</strong></p>
+<ol>
+    <li><strong>Creation:</strong> A producer process creates a shared memory segment.</li>
+    <li><strong>Attachment:</strong> Both the producer and consumer processes attach to this shared memory segment.</li>
+    <li><strong>Communication:</strong> The producer writes data to the shared memory, and the consumer reads it.</li>
+    <li><strong>Synchronization:</strong> Since both processes access the same memory, they must use a synchronization mechanism (like semaphores or mutexes) to prevent race conditions. The producer ensures the shared memory is not full before writing, and the consumer ensures it is not empty before reading.</li>
+</ol>
+
+<h3>4. Demonstrate how context switch is executed by operating system</h3>
+<p>A <strong>context switch</strong> is the mechanism by which the operating system saves the state of the current process and restores the state of another process. This allows the CPU to be shared among multiple processes, giving the illusion of multitasking. A context switch is a pure overhead because no useful work is done while the OS is switching processes.</p>
+<p><strong>Execution of a Context Switch:</strong></p>
+<ol>
+    <li><strong>Scheduler Invocation:</strong> An event (e.g., an interrupt, system call, or time slice expiration) causes the OS scheduler to be invoked.</li>
+    <li><strong>State Save:</strong> The kernel saves the current state of the running process in its Process Control Block (PCB). This includes:
+        <ul>
+            <li>The value of the program counter (PC).</li>
+            <li>All CPU registers.</li>
+            <li>The process's state (e.g., from Running to Ready or Waiting).</li>
+            <li>Memory management information.</li>
+        </ul>
+    </li>
+    <li><strong>Scheduler Decision:</strong> The scheduler chooses the next process to be executed from the ready queue.</li>
+    <li><strong>State Load:</strong> The kernel loads the saved state of the newly selected process from its PCB into the CPU's registers and memory management hardware.</li>
+    <li><strong>Execution:</strong> The program counter is loaded, and the newly selected process starts executing from where it left off.</li>
+</ol>
+
+</div>
+
+</body>
+</html>
